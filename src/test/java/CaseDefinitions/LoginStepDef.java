@@ -12,6 +12,7 @@ import io.cucumber.java.en.When;
 
 public class LoginStepDef extends driverUtility{
 
+    // Declare object for HomePage and login to interact with homepage and login class elements
     HomePage homePage;
     Login login;
 

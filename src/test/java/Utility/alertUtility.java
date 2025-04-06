@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-
+// Will be use to handle alert message
 public class alertUtility {
 
     WebDriver driver;

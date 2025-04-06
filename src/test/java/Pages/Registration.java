@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class Registration {
 
+    // Webdriver instance
     WebDriver driver;
     private WebDriverWait wait;
     //Locators
@@ -23,19 +24,23 @@ public class Registration {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
+    // Enter username to input field
     public void enterUsername(String account){
         driver.findElement(userInputUsername).sendKeys(account);
     }
 
+    // Enter password to input field
     public void enterPassword(String account){
         driver.findElement(userInputPassword).sendKeys(account);
     }
 
+    // Clicking registration submission button
     public void submitRegis(){
         driver.findElement(registerSubmitButton).click();
         this.wait.until(ExpectedConditions.alertIsPresent());
     }
 
+    // Entering pre existing account info to register
     public void enterExistingUsername(){
         driver.findElement(userInputUsername).sendKeys("DemoAccount15");
         driver.findElement((userInputPassword)).sendKeys("DemoAccount15");

@@ -20,13 +20,13 @@ Configurations & Tools
    ./gradlew cucumber
 
 Case Example :
-Scenario: user can login with valid account
-Given user is on demoblaze homepage
-And user has click login button
-And Login modal is shown to user
-When user enter username "DemoAccount15" and password "DemoAccount15"
-And user click Login
-Then user will successfully login and directed to homepage
+- Scenario: user can login with valid account
+1. Given user is on demoblaze homepage
+2. And user has click login button
+3. And Login modal is shown to user
+4. When user enter username "DemoAccount15" and password "DemoAccount15"
+5. And user click Login
+6. When user will successfully login and directed to homepage
 
 
 

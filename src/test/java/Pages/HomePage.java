@@ -11,40 +11,44 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HomePage {
 
+    //Calling webdriver instance
     WebDriver driver;
     private WebDriverWait wait;
 
-    //Locators
+    //Web elements Locators
     By signupbutton = By.id("signin2");
     By signupModal = By.id("signInModal");
     By loginButton = By.id("login2");
     By loginModal =  By.id("logInModal");
     By userValidLogin = By.id("nameofuser");
 
+    // Constructor initializes driver and wait
     public HomePage(WebDriver driver){
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void gotoPage(){
-        driver.get("https://www.demoblaze.com");
+        driver.get("https://www.demoblaze.com"); // Method to navigate to the demoblaze homepage
     }
     public void getSignUP(){
-        driver.findElement(signupbutton).click();
+        driver.findElement(signupbutton).click(); // Click the "Sign up" button
+
     }
 
     public void regisModal(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(signupModal));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(signupModal));// Wait for the registration modal to be visible
     }
 
     public void getLogin(){
-        driver.findElement(loginButton).click();
+        driver.findElement(loginButton).click(); // Click the "Login" button
     }
 
     public void getLoginModal(){
-        wait.until(ExpectedConditions.visibilityOfElementLocated(loginModal));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(loginModal));// Wait for the login modal to be visible
     }
 
+    // Wait for the user's name label to appear (as login success indicator)
     public boolean validateUserLogin(){
         wait.until(ExpectedConditions.visibilityOfElementLocated(userValidLogin));
         WebElement LoginValidation = driver.findElement(userValidLogin);

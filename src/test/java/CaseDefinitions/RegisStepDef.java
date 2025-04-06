@@ -11,6 +11,7 @@ import io.cucumber.java.en.When;
 
 public class RegisStepDef extends driverUtility {
 
+    // Declare object for HomePage and regis to interact with homepage and regis class elements
     HomePage homePage;
     Registration registration;
 
